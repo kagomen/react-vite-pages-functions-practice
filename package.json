@@ -4,8 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "wrangler pages dev --compatibility-date=2024-07-04 -- npx vite",
-    "build": "vite build",
+    "dev": "wrangler pages dev --local --compatibility-date=2024-07-04 --port=3007 -- npx vite",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "deploy": "npm run build && wrangler pages publish pages",
     "preview": "vite preview"

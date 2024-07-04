@@ -3,8 +3,8 @@ import { handle } from 'hono/cloudflare-pages'
 
 const app = new Hono()
 
-app.get('/bye', (c) => {
-  return c.text('bye, world!')
+app.get('/hello', (c) => {
+  return c.text(c.env.MESSAGE)
 })
 
 export const onRequest = handle(app)
