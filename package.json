@@ -4,9 +4,10 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "dev": "wrangler pages dev --compatibility-date=2024-07-04 -- npx vite",
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "deploy": "npm run build && wrangler pages publish pages",
     "preview": "vite preview"
   },
   "dependencies": {
